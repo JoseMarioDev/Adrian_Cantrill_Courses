@@ -6,3 +6,4 @@
 - Github repo links are in the page before this
 - recommended route to take exams: associate exams → pro exams → cloud practitioner → specialty exams
 - course uses the animals4life organization - same as SAA-C02 course
+          
