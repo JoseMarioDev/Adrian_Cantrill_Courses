@@ -203,6 +203,68 @@ Summary
 
 🌎  Network Starter Pack Layers 4 and 5 - Transport and Session 
 
+Concepts
+
+- Transport layer runs on top of network layer.  Session runs on top of Transport
+- limitations of layer 3
+    - packets are routed independently, might arrive to receiver out or order
+    - provides no method of assuring method arrival
+    - packets can go missing
+    - no method of splitting by app or channel
+    - ip has no flow control.  if sender is sending packets too fast for receiver
+
+TCP/UDP
+
+- TCP
+    - reliable
+    - error correction
+    - ordering of data
+    - HTTP/HTTPS/SSH
+    - establishes handshake
+- UDP
+    - less reliable
+    - faster
+    - doesnt error correct nor handshake
+- TCP Segments
+    - encapsulated in IP packets
+    - dont have src or dst IPs.  provided by packets
+    - Do have src/dst ports
+    - has sequence number to correctly order segments at receiver
+    - acknowledgement field
+    - flags
+    - window - flow control, indicates how much can receive
+    - checksum
+    - urgent pointer
+    - data
+
+TCP Architecture
+
+- how connections works
+- creates 2 streams using well known ports and ephemeral ports
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0fdcdf1f-f400-456f-a995-758ef0f4f1ae/Screen_Shot_2021-05-14_at_12.33.45_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0fdcdf1f-f400-456f-a995-758ef0f4f1ae/Screen_Shot_2021-05-14_at_12.33.45_PM.png)
+
+- 3 way handshake flags
+- SYN sends sequence number
+- SYN-ACK sequence num + Acknowledge
+- ACK  sender acknowledges receipt of acknowledgement
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7f9bfda8-4f8b-46c7-ac47-15cfdee02f59/Screen_Shot_2021-05-14_at_12.46.43_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7f9bfda8-4f8b-46c7-ac47-15cfdee02f59/Screen_Shot_2021-05-14_at_12.46.43_PM.png)
+
+Sessions & State
+
+- stateless firewalls see two things
+- two rules will be required out and in - AWS NaCL
+- Stateful firewalls sees one things automatically allows out and in - AWS Security Groups
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/539d61af-5964-45d0-b6e0-8b86521cd331/Screen_Shot_2021-05-14_at_12.49.48_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/539d61af-5964-45d0-b6e0-8b86521cd331/Screen_Shot_2021-05-14_at_12.49.48_PM.png)
+
+Well Known Ports
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fb38226d-e515-420c-99f2-a6f499a31541/Screen_Shot_2021-05-14_at_12.50.51_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fb38226d-e515-420c-99f2-a6f499a31541/Screen_Shot_2021-05-14_at_12.50.51_PM.png)
+
+---
+
 🌎  Network Starter Pack -  NAT 
 
 🌎  Network Starter Pack - Subnetting 
