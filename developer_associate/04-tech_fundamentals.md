@@ -267,7 +267,39 @@ Well Known Ports
 
 🌎  Network Starter Pack -  NAT 
 
+Concepts
+
+- process of adjusting packet's src/dest addresses to allow transit between diff networks
+- overcome shortage of IPv4 addresses
+- provides security benefits
+
+Static NAT
+
+- 1 private to 1 fixed public address - IGW
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4a1f8190-f016-469a-826a-96a8860a5b59/Screen_Shot_2021-05-14_at_3.17.58_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4a1f8190-f016-469a-826a-96a8860a5b59/Screen_Shot_2021-05-14_at_3.17.58_PM.png)
+
+Dynamic NAT
+
+- 1 private to 1st available public IP
+- given IP from a pool
+- temporary
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7d48931b-f9e2-4702-86cf-2ebb43fbf0b8/Screen_Shot_2021-05-14_at_3.21.21_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7d48931b-f9e2-4702-86cf-2ebb43fbf0b8/Screen_Shot_2021-05-14_at_3.21.21_PM.png)
+
+Port Address Translation(PAT)
+
+- many private to 1 public - NATGW
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c8731906-fc88-4eb8-bad6-a104e289f025/Screen_Shot_2021-05-14_at_3.25.51_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c8731906-fc88-4eb8-bad6-a104e289f025/Screen_Shot_2021-05-14_at_3.25.51_PM.png)
+
+---
+
 🌎  Network Starter Pack - Subnetting 
+
+Concepts
+
+- 
 
 🚫  Distributed Denial of Service Attack
 
