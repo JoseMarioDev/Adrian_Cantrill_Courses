@@ -1,14 +1,15 @@
-## 🗒️  Notes
+## 🗒️ Notes
 
-👨🏽‍💻  YAML 101
+👨🏽‍💻 YAML 101
 
 - collection of key/value pairs
 - supports strings, floats, ints, bool, lists, dict
 - supports lists
-    - lists can be inline
-    - or indented with dashes "-"
 
-    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6ce47b18-cefd-4771-a5b0-d0d18655f81b/Screen_Shot_2021-05-10_at_3.28.33_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6ce47b18-cefd-4771-a5b0-d0d18655f81b/Screen_Shot_2021-05-10_at_3.28.33_PM.png)
+  - lists can be inline
+  - or indented with dashes "-"
+
+  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6ce47b18-cefd-4771-a5b0-d0d18655f81b/Screen_Shot_2021-05-10_at_3.28.33_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6ce47b18-cefd-4771-a5b0-d0d18655f81b/Screen_Shot_2021-05-10_at_3.28.33_PM.png)
 
 - values can be in parentheses or not, both are valid
 - supports dictionaries - a list of dictionaries
@@ -17,22 +18,22 @@
 
 ---
 
-👨🏽‍💻  JSON 101
+👨🏽‍💻 JSON 101
 
 - key/value pairs
 - similar to YAML but format is just different
 - doesn't care about indentation
 - values can be string, obj, num, array, bool, or null
-- supports objects and arrays.  can be nested
+- supports objects and arrays. can be nested
 - used for AWS policies
 
 ---
 
-🔑  Encryption 101 - part 1
+🔑 Encryption 101 - part 1
 
 encryption approaches
 
-- encryption at rest -  data stored in hardware in encrypted form
+- encryption at rest - data stored in hardware in encrypted form
 - encryption in transit - apply encryption wrapper while data is being transferred
 
 concepts
@@ -58,7 +59,7 @@ asymmetric encryption
 
 ---
 
-🔑  Encryption 101 - part 2
+🔑 Encryption 101 - part 2
 
 signing
 
@@ -76,7 +77,7 @@ steganography
 
 ---
 
-🌎  Network Starter Pack  - OSI Model 
+🌎 Network Starter Pack - OSI Model
 
 OSI Model
 
@@ -86,7 +87,7 @@ higher layers build on lower layers
 
 ---
 
-🌎  Network Starter Pack Layer 1 - Physical 
+🌎 Network Starter Pack Layer 1 - Physical
 
 - physical medium can be copper, fiber, or wifi
 - used to connect computers together
@@ -96,45 +97,46 @@ higher layers build on lower layers
 
 ---
 
-🌎  Network Starter Pack Layer 2 - Data Link
+🌎 Network Starter Pack Layer 2 - Data Link
 
 - uses Frames - format for sending data over network
 - hardware: switch
-    - store and forward frames
-    - keeps mac address table.  learns which devices are connected
-    - doesn't forward collisions
+  - store and forward frames
+  - keeps mac address table. learns which devices are connected
+  - doesn't forward collisions
 - mac addresses - unique hardware address for each NIC
 - frame is a container w/components
-    - preamble
-    - destination/source mac addresses
-    - ethertype - specify layer 3 protocol
-    - payload - data frame is sending
-    - frame check sequence
 
-    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/be619681-5196-4342-8cf2-1988e2463636/Screen_Shot_2021-05-13_at_8.18.38_AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/be619681-5196-4342-8cf2-1988e2463636/Screen_Shot_2021-05-13_at_8.18.38_AM.png)
+  - preamble
+  - destination/source mac addresses
+  - ethertype - specify layer 3 protocol
+  - payload - data frame is sending
+  - frame check sequence
+
+  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/be619681-5196-4342-8cf2-1988e2463636/Screen_Shot_2021-05-13_at_8.18.38_AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/be619681-5196-4342-8cf2-1988e2463636/Screen_Shot_2021-05-13_at_8.18.38_AM.png)
 
 - CSMA/CD
-    - carrier sense multiple access/collision detection
-    - sender listens to see if traffic is on layer 1. if not, it sends frame to receiver
-    - if it senses traffic, it's backs away for a random time and tries again
-    - uses encapsulation(taking data wrapping it in something else), layer 3 loads payload inside frame to send
+  - carrier sense multiple access/collision detection
+  - sender listens to see if traffic is on layer 1. if not, it sends frame to receiver
+  - if it senses traffic, it's backs away for a random time and tries again
+  - uses encapsulation(taking data wrapping it in something else), layer 3 loads payload inside frame to send
 
 ---
 
-🔢  Decimal to Binary Conversion - IP Addressing
+🔢 Decimal to Binary Conversion - IP Addressing
 
 - how to convert from dec to bin
 - focuses on IPv4
 - 32 bits, 4 x 8bits
 - 8 bits in a byte
 
-    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2c97180b-93e7-4dc8-b1d6-5681042368a7/Screen_Shot_2021-05-13_at_8.37.40_AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2c97180b-93e7-4dc8-b1d6-5681042368a7/Screen_Shot_2021-05-13_at_8.37.40_AM.png)
+  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2c97180b-93e7-4dc8-b1d6-5681042368a7/Screen_Shot_2021-05-13_at_8.37.40_AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2c97180b-93e7-4dc8-b1d6-5681042368a7/Screen_Shot_2021-05-13_at_8.37.40_AM.png)
 
-    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/79628a91-335c-4ab6-83e3-0e2cea5da02a/Screen_Shot_2021-05-13_at_8.40.25_AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/79628a91-335c-4ab6-83e3-0e2cea5da02a/Screen_Shot_2021-05-13_at_8.40.25_AM.png)
+  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/79628a91-335c-4ab6-83e3-0e2cea5da02a/Screen_Shot_2021-05-13_at_8.40.25_AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/79628a91-335c-4ab6-83e3-0e2cea5da02a/Screen_Shot_2021-05-13_at_8.40.25_AM.png)
 
 ---
 
-🌎  Network Starter Pack Layer 3 - Network 
+🌎 Network Starter Pack Layer 3 - Network
 
 Fundamentals
 
@@ -143,22 +145,22 @@ Fundamentals
 - hardware: router
 - forwards decisions using route and route tables
 - every IPv4 packet has:
-    - source/destination IP address
-    - protocol field - Layer 4(TCP, UDP, ICMP)
-    - Data - generated from Layer 4 protocol
-    - TTL
+  - source/destination IP address
+  - protocol field - Layer 4(TCP, UDP, ICMP)
+  - Data - generated from Layer 4 protocol
+  - TTL
 - every IPv6 packet has:
-    - source/dest IP address
-    - data
-    - hop limit - similar to TTL
+  - source/dest IP address
+  - data
+  - hop limit - similar to TTL
 
 IP addressing v4
 
-- dotted decimal notation  - ex: 133.33.3.7
+- dotted decimal notation - ex: 133.33.3.7
 - 2 parts
-    - network part and host part
-    - if network part of 2 ip addresses match, they are on the same network
-    - if not, they are on diff networks
+  - network part and host part
+  - if network part of 2 ip addresses match, they are on the same network
+  - if not, they are on diff networks
 - assigned either statically or dynamically
 - want them to be unique
 
@@ -201,41 +203,41 @@ Summary
 
 ---
 
-🌎  Network Starter Pack Layers 4 and 5 - Transport and Session 
+🌎 Network Starter Pack Layers 4 and 5 - Transport and Session
 
 Concepts
 
-- Transport layer runs on top of network layer.  Session runs on top of Transport
+- Transport layer runs on top of network layer. Session runs on top of Transport
 - limitations of layer 3
-    - packets are routed independently, might arrive to receiver out or order
-    - provides no method of assuring method arrival
-    - packets can go missing
-    - no method of splitting by app or channel
-    - ip has no flow control.  if sender is sending packets too fast for receiver
+  - packets are routed independently, might arrive to receiver out or order
+  - provides no method of assuring method arrival
+  - packets can go missing
+  - no method of splitting by app or channel
+  - ip has no flow control. if sender is sending packets too fast for receiver
 
 TCP/UDP
 
 - TCP
-    - reliable
-    - error correction
-    - ordering of data
-    - HTTP/HTTPS/SSH
-    - establishes handshake
+  - reliable
+  - error correction
+  - ordering of data
+  - HTTP/HTTPS/SSH
+  - establishes handshake
 - UDP
-    - less reliable
-    - faster
-    - doesnt error correct nor handshake
+  - less reliable
+  - faster
+  - doesnt error correct nor handshake
 - TCP Segments
-    - encapsulated in IP packets
-    - dont have src or dst IPs.  provided by packets
-    - Do have src/dst ports
-    - has sequence number to correctly order segments at receiver
-    - acknowledgement field
-    - flags
-    - window - flow control, indicates how much can receive
-    - checksum
-    - urgent pointer
-    - data
+  - encapsulated in IP packets
+  - dont have src or dst IPs. provided by packets
+  - Do have src/dst ports
+  - has sequence number to correctly order segments at receiver
+  - acknowledgement field
+  - flags
+  - window - flow control, indicates how much can receive
+  - checksum
+  - urgent pointer
+  - data
 
 TCP Architecture
 
@@ -247,7 +249,7 @@ TCP Architecture
 - 3 way handshake flags
 - SYN sends sequence number
 - SYN-ACK sequence num + Acknowledge
-- ACK  sender acknowledges receipt of acknowledgement
+- ACK sender acknowledges receipt of acknowledgement
 
 ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7f9bfda8-4f8b-46c7-ac47-15cfdee02f59/Screen_Shot_2021-05-14_at_12.46.43_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7f9bfda8-4f8b-46c7-ac47-15cfdee02f59/Screen_Shot_2021-05-14_at_12.46.43_PM.png)
 
@@ -265,7 +267,7 @@ Well Known Ports
 
 ---
 
-🌎  Network Starter Pack -  NAT 
+🌎 Network Starter Pack - NAT
 
 Concepts
 
@@ -295,12 +297,39 @@ Port Address Translation(PAT)
 
 ---
 
-🌎  Network Starter Pack - Subnetting 
+🌎 Network Starter Pack - Subnetting
 
 Concepts
 
-- 
+- IP classes were broken into classes - A, B, C
 
-🚫  Distributed Denial of Service Attack
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/302ce9f9-5e69-49f5-866e-6f4617635e33/Screen_Shot_2021-05-15_at_9.22.48_AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/302ce9f9-5e69-49f5-866e-6f4617635e33/Screen_Shot_2021-05-15_at_9.22.48_AM.png)
+
+Private Range of IPs
+
+- were setup to be used for internal networks. not public for internet. 1 range for each class - A, B, C
+- use NAT to access internet because IP addresses were running out
+- IPv6 was created to solve problem, so many addresses available it won't run out
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/06c8528a-0372-4257-bc21-87235b42e171/Screen_Shot_2021-05-15_at_9.25.18_AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/06c8528a-0372-4257-bc21-87235b42e171/Screen_Shot_2021-05-15_at_9.25.18_AM.png)
+
+Subnetting
+
+- process of breaking down IP range into pieces
+- done by diving larger network/2, then breaking down those parts further if need be
+- CIDR uses /num
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/14333452-8ab7-4618-bb71-fd707ef8dd2b/Screen_Shot_2021-05-15_at_9.35.43_AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/14333452-8ab7-4618-bb71-fd707ef8dd2b/Screen_Shot_2021-05-15_at_9.35.43_AM.png)
+
+Subnetting example
+
+- breaking down a /16 network
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e58422b3-839d-42b8-a154-5c207be9f3c1/Screen_Shot_2021-05-15_at_9.43.00_AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e58422b3-839d-42b8-a154-5c207be9f3c1/Screen_Shot_2021-05-15_at_9.43.00_AM.png)
+
+---
+
+🚫 Distributed Denial of Service Attack
 
 🛣️. SSL and TLS
+ 2
