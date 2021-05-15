@@ -331,5 +331,54 @@ Subnetting example
 
 🚫 Distributed Denial of Service Attack
 
+Concepts
+
+- attacks designed to overload websites
+- competes against legitimate connections
+- distributed. hard to block individual IPs/ranges
+- three categories of attacks
+
+  - application layer - http flood
+
+    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2391ac69-4fd0-4d84-a451-74d2fcd583b8/Screen_Shot_2021-05-15_at_1.07.20_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2391ac69-4fd0-4d84-a451-74d2fcd583b8/Screen_Shot_2021-05-15_at_1.07.20_PM.png)
+
+  - protocol attack - SYN flood
+
+    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4eb9f525-c866-4b75-90c2-51c07cf806bf/Screen_Shot_2021-05-15_at_1.08.55_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4eb9f525-c866-4b75-90c2-51c07cf806bf/Screen_Shot_2021-05-15_at_1.08.55_PM.png)
+
+  - volumetric attacks - DNS Amplification
+
+    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8cb8f852-dc39-47f7-86db-3009bdae0d3e/Screen_Shot_2021-05-15_at_1.10.30_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8cb8f852-dc39-47f7-86db-3009bdae0d3e/Screen_Shot_2021-05-15_at_1.10.30_PM.png)
+
+  - involves bots usually
+
+---
+
 🛣️. SSL and TLS
- 2
+
+Concepts
+
+- TLS is newer, more secure version os SSL
+- provides privacy and data integrity between client/server
+- makes sure communications are encrypted
+- uses asymmetric at first, then moves to symmetric for ongoing(easier to perform)
+- identity verification - server or client/server verified
+- reliable connection - protect again alteration of data in transit
+
+Three phases to secure communication
+
+- operates at Layer 4
+  1. Cipher Suites - set of protocols used by TLS
+     - algorithms grouped together
+     - client/server must agree on what cipher suite to use
+  2. Authentication
+     - client verifies server id by verifying it's SSL cert with PCA
+     - PCA = public certificate authority
+     - client encrypts data and sends to server to verify server has private key
+  3. Key exchange
+     - move to symmetric encryption
+     - generates premaster key and it's used to create a master secret which is used going forward
+
+Visual architecture
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/456160ac-5b4f-4a50-bdf1-047ba17f1a9e/Screen_Shot_2021-05-15_at_1.26.28_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/456160ac-5b4f-4a50-bdf1-047ba17f1a9e/Screen_Shot_2021-05-15_at_1.26.28_PM.png)
