@@ -156,7 +156,22 @@ Examples
 
 Concepts
 
--
+- how to manage multiple AWS accounts
+- takes a single AWS account, create an organization. the account becomes the management account
+- invite other accounts to the organization
+  - they become member accounts
+- hierarchal structure, inverted tree, the top is the organizational root
+- can also contain OUs
+- individual billings is removed. consolidated billing. single monthly bill
+- consolidation of reservations and volume discounts
+- can create new accounts this way
+- users can log into 1 account, then use roles to access other accounts
+
+  - or can use identity federation to use existing log in creds
+
+    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c877d342-0665-4085-aeb4-55748e89a130/Screen_Shot_2021-05-19_at_6.26.14_AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c877d342-0665-4085-aeb4-55748e89a130/Screen_Shot_2021-05-19_at_6.26.14_AM.png)
+
+---
 
 ---
 
@@ -164,22 +179,16 @@ Concepts
 
 Concepts
 
--
-
----
+- ***
 
 ### 📊 CloudWatch Logs
 
 Concepts
 
--
-
----
+- ***
 
 ### 🌬️ CloudTrail
 
 Concepts
 
--
-
----
+- ***
