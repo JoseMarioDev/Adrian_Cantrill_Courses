@@ -148,7 +148,7 @@ Examples
 
   - cross account access
 
-  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ad807908-4d2c-4484-82d8-4342f61a3b8f/Screen_Shot_2021-05-18_at_7.59.56_AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ad807908-4d2c-4484-82d8-4342f61a3b8f/Screen_Shot_2021-05-18_at_7.59.56_AM.png)
+    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ad807908-4d2c-4484-82d8-4342f61a3b8f/Screen_Shot_2021-05-18_at_7.59.56_AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ad807908-4d2c-4484-82d8-4342f61a3b8f/Screen_Shot_2021-05-18_at_7.59.56_AM.png)
 
 ---
 
@@ -173,22 +173,36 @@ Concepts
 
 ---
 
----
-
 ### 🏢 Service Control Policies (SCP)
 
 Concepts
 
-- ***
+- feature of AWS Organizations which allows restrictions to be placed on member accounts in the form of boundaries
+- JSON policy documents that can be attached to the org, OUs, or individual AWS accounts
+- policy rules inherit down
+- the management is never affected by SCPs
 
-### 📊 CloudWatch Logs
+  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1a62512c-1886-4293-9c72-2236cf7bee13/Screen_Shot_2021-05-19_at_11.49.56_AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1a62512c-1886-4293-9c72-2236cf7bee13/Screen_Shot_2021-05-19_at_11.49.56_AM.png)
+
+Features
+
+- are account permissions boundaries
+- limit what the account can do
+- they dont grant permissions
+- can use in 2 ways
+
+  - allow lists
+    - use when you need to be specific on access
+    - everything would be denied, you would have to create allow policies
+  - deny lists - default
+    - by default services are given `FullAWSAccess`
+    - you need to create deny policies to deny access
+    - need to add restrictions
+
+  ***
+
+### 📊 CloudWatch Logs and CloudTrail
 
 Concepts
 
-- ***
-
-### 🌬️ CloudTrail
-
-Concepts
-
-- ***
+next 2 sections covers CW Logs and CloudTrail. I decided to include it in[CloudWatch](https://www.notion.so/CloudWatch-1ed93cac309c45deaf59093ee411648b)
