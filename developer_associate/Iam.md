@@ -162,7 +162,7 @@ Concepts
   - they become member accounts
 - hierarchal structure, inverted tree, the top is the organizational root
 - can also contain OUs
-- individual billings is removed. consolidated billing. single monthly bill
+- individual billings is removed. consolidated billing. single monthly bill     
 - consolidation of reservations and volume discounts
 - can create new accounts this way
 - users can log into 1 account, then use roles to access other accounts
