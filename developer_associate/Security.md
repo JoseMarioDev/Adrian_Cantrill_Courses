@@ -4,6 +4,9 @@
 
 Concepts
 
+- step through IAM policy examples and learn how to interpret them, understand their effects
+- policy evaluation → [https://github.com/acantril/aws-dev-associate/blob/main/08_Security/PolicyEvaluation/policy1_holidaygifts.json](https://github.com/acantril/aws-dev-associate/blob/main/08_Security/PolicyEvaluation/policy1_holidaygifts.json)
+
 ---
 
 ### Policy Interpretation Deep Dive - Example 2
