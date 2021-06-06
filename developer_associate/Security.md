@@ -91,3 +91,36 @@ Multiple Accounts Evaluation Logic
 ### CloudHSM
 
 Concepts
+
+- required to achieve compliance with certain security standards such as FIPS 140-2 Level 3
+
+[FIPS 140-2 - Wikipedia](https://en.wikipedia.org/wiki/FIPS_140-2)
+
+- HSM - Hardware Security Module
+- true "single tenant" HSM
+- AWS provisioned, fully customer managed
+- compliant - FIPS 140-2 Level 3
+  - KMS is L2
+- accessed with industry standard APIs
+  - PKCS#11
+  - JCE
+  - Microsoft CryptoNG (CNG)
+- KMS can use CloudHSM as a custom key store
+  - integration w/KMS
+
+Visually
+
+- deployed in a separate VPC
+- need to create a cluster for HA
+- interact with customer VPC using ENI
+- needs to have CloudHSM client on EC2 instances
+- AWS has no access to secure area when key material is held
+
+  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8b098507-3c0d-4b67-85a3-0a457a7db4e9/Screen_Shot_2021-06-06_at_10.56.19_AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8b098507-3c0d-4b67-85a3-0a457a7db4e9/Screen_Shot_2021-06-06_at_10.56.19_AM.png)
+
+Use Cases
+
+- no native integration between CloudHSM and AWS services
+- can be used for off-loading SSL/TLS processing for web servers
+- can be used to enable Transparent Data Encryption for Oracle Databases
+- protect private keys for issuing Certificate Authority
