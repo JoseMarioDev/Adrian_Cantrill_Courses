@@ -54,6 +54,38 @@ Concepts
 
 Concepts
 
+- policy evaluation process AWS uses for single and multi-account access scenarios
+- same process is used each and every time an identity attempts to access a resource
+
+Considerations
+
+1. Organization SCPs
+2. Resource policies
+3. IAM identity boundaries
+4. Session policies - when using roles
+5. identity policies
+
+Flow to evaluate permissions
+
+1. first checks to see if there is an explicit deny. if so, game over
+2. are there any SCPs?
+   1. do they allow the action? if not, implicit deny
+3. is there a resource policy?
+   1. if yes, all good
+4. are there any permission boundaries?
+5. are there any session policies?
+6. identity policies?
+
+Visually
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/76997cf6-5498-4151-a5a3-002b4ec99434/Screen_Shot_2021-06-06_at_10.39.35_AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/76997cf6-5498-4151-a5a3-002b4ec99434/Screen_Shot_2021-06-06_at_10.39.35_AM.png)
+
+Multiple Accounts Evaluation Logic
+
+- require applicable allow from account A and Account B
+
+  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/541ed849-05a1-4ed1-9905-ca3b540aa6fc/Screen_Shot_2021-06-06_at_10.41.56_AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/541ed849-05a1-4ed1-9905-ca3b540aa6fc/Screen_Shot_2021-06-06_at_10.41.56_AM.png)
+
 ---
 
 ### CloudHSM
