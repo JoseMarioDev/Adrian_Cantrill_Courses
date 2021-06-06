@@ -39,6 +39,15 @@ Concepts
 
 Concepts
 
+- how to secure S3 based on home folders and IAM policy variables
+- policy evaluated → [https://github.com/acantril/aws-dev-associate/blob/main/08_Security/PolicyEvaluation/policy3_homefolders.json](https://github.com/acantril/aws-dev-associate/blob/main/08_Security/PolicyEvaluation/policy3_homefolders.json)
+- AWS documentation on variables and tags
+
+[IAM policy elements: Variables and tags](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_variables.html)
+
+- this policy performs a prefix condition check to interact inside home folder only
+  - using`${aws:username}` variable
+
 ---
 
 ### AWS Permissions Evaluation
