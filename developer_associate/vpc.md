@@ -21,5 +21,78 @@ Types
   - each VPC is config with a IGW, SG, and NACL
   - by default, anything placed inside each subnet is given a public IPv4 address
 - custom VPC
+
   - you must config everything
   - 100% private by default
+
+  ***
+
+### ☁️ VPC Sizing and Structure - Part 1
+
+Concepts
+
+- content
+
+---
+
+### ☁️ VPC Sizing and Structure - Part 2
+
+Concepts
+
+- content
+
+---
+
+### ☁️ Custom VPCs
+
+Concepts
+
+- content
+
+---
+
+### ☁️ VPC Subnets
+
+Concepts
+
+- content
+
+---
+
+### ☁️ VPC Routing, Internet Gateway & Bastion Hosts
+
+Concepts
+
+- content
+
+---
+
+### ☁️ Network Access Control Lists(NACLs)
+
+Concepts
+
+- content
+
+---
+
+### ☁️ Security Groups(SGs)
+
+Concepts
+
+- content
+
+---
+
+### ☁️ Network Address Translation & NAT Gateway - Part 1
+
+Concepts
+
+- content
+
+---
+
+### ☁️ Network Address Translation & NAT Gateway - Part 2
+
+Concepts
+
+- content
