@@ -21,17 +21,25 @@ Types
   - each VPC is config with a IGW, SG, and NACL
   - by default, anything placed inside each subnet is given a public IPv4 address
 - custom VPC
-
   - you must config everything
   - 100% private by default
 
-  ***
+---
 
 ### ☁️ VPC Sizing and Structure - Part 1
 
-Concepts
+Considerations
 
-- content
+- [AWS documentation on VPC design](https://aws.amazon.com/answers/networking/aws-single-vpc-design/)
+- need to decide on CIDR range
+- what size should the VPC be?
+- are there other networks we need to use?
+  - ranges other networks use
+  - try to predict the future
+- VPC structure
+- VPC minimum size /28(16 IPs)
+- VPC maximum /16(65,456 IPs)
+- avoid common ranges
 
 ---
 
