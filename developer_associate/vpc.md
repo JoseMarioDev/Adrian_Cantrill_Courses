@@ -31,6 +31,7 @@ Types
 Considerations
 
 - [AWS documentation on VPC design](https://aws.amazon.com/answers/networking/aws-single-vpc-design/)
+- IP address scheme for A4L → [https://cloud.google.com/vpc/docs/vpc](https://cloud.google.com/vpc/docs/vpc)
 - need to decide on CIDR range
 - what size should the VPC be?
 - are there other networks we need to use?
@@ -47,7 +48,8 @@ Considerations
 
 Concepts
 
-- content
+- focuses on VPC design and IP planning
+- IP address scheme for A4L → [https://cloud.google.com/vpc/docs/vpc](https://cloud.google.com/vpc/docs/vpc)
 
 ---
 
