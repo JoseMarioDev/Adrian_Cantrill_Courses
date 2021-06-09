@@ -58,6 +58,27 @@ Concepts
 Concepts
 
 - [AWS docs on VPC limits](https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html)
+- what we'll be building for this course
+
+  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/66123d5d-bab9-42cb-a674-2775c5c5ab27/Screen_Shot_2021-06-09_at_6.32.36_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/66123d5d-bab9-42cb-a674-2775c5c5ab27/Screen_Shot_2021-06-09_at_6.32.36_PM.png)
+
+Architectural Theory
+
+- VPCs are regionally resilient
+- nothing is allowed in/out without explicit configuration
+- support hybrid networking - other cloud or on-prem
+- can select default or dedicated tenancy
+  - if you pick dedicated tenancy at VPC level, can be costly
+- can use private CIDR and public IPs
+- allocated 1 primary private IPv4 CIDR block
+- min /28 and max /16
+- can add secondary IPv4 blocks
+- can use an IPv6 /56 CIDR block
+  - IPv6 are public
+- VPCs use DNS provided by Route 53
+- 2 DNS options that are important
+  - `enableDnsHostnames` - gives instances DNS names
+  - `enableDNSSupport` - enables DNS resolution in VPC
 
 ---
 
