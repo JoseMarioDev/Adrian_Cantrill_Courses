@@ -86,7 +86,26 @@ Architectural Theory
 
 Concepts
 
-- content
+- add structure to a VPC
+- where applications run from in a VPC
+- start off as private, need configuration to make public
+- subnets are AZ resilient
+- one subnet is in one AZ
+- is allocated a IPv4 CIDR, that is subset of the VPC CIDR
+- optionally, can be allocated an IPv6 CIDR
+- can communicate with other subnets in the VPC
+
+Reserved IP addresses
+
+- 5 in total
+  - Network address = first address
+  - 'network +1' = VPC Router
+  - 'network+2' = reserved for DNS
+  - 'network+3' = reserved for future use
+  - broadcast address = last IP in subnet
+- for every VPC a DHCP option set is created
+  - can config auto assign IPv4 addresses
+  - can config auto assign IPv6 addresses
 
 ---
 
