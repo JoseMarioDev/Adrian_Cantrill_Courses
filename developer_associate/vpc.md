@@ -57,7 +57,7 @@ Concepts
 
 Concepts
 
-- content
+- [AWS docs on VPC limits](https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html)
 
 ---
 
