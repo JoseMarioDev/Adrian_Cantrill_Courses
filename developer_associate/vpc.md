@@ -1,6 +1,6 @@
-## 🗒️ Notes
+## 🗒️  Notes
 
-### 💻 **Basics**
+### 💻  **Basics**
 
 Concepts
 
@@ -14,15 +14,15 @@ Concepts
 Types
 
 - default VPC - can only have 1, created by default
-  - config in a very specific way
-  - given a CIDR of 172.31.0.0/16
-  - configured to have one subnet in each AZ of region
-  - each subnet is given a /20 subnet
-  - each VPC is config with a IGW, SG, and NACL
-  - by default, anything placed inside each subnet is given a public IPv4 address
+    - config in a very specific way
+    - given a CIDR of 172.31.0.0/16
+    - configured to have one subnet in each AZ of region
+    - each subnet is given a /20 subnet
+    - each VPC is config with a IGW, SG, and NACL
+    - by default, anything placed inside each subnet is given a public IPv4 address
 - custom VPC
-  - you must config everything
-  - 100% private by default
+    - you must config everything
+    - 100% private by default
 
 ---
 
@@ -35,8 +35,8 @@ Considerations
 - need to decide on CIDR range
 - what size should the VPC be?
 - are there other networks we need to use?
-  - ranges other networks use
-  - try to predict the future
+    - ranges other networks use
+    - try to predict the future
 - VPC structure
 - VPC minimum size /28(16 IPs)
 - VPC maximum /16(65,456 IPs)
@@ -60,7 +60,7 @@ Concepts
 - [AWS docs on VPC limits](https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html)
 - what we'll be building for this course
 
-  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/66123d5d-bab9-42cb-a674-2775c5c5ab27/Screen_Shot_2021-06-09_at_6.32.36_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/66123d5d-bab9-42cb-a674-2775c5c5ab27/Screen_Shot_2021-06-09_at_6.32.36_PM.png)
+    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/66123d5d-bab9-42cb-a674-2775c5c5ab27/Screen_Shot_2021-06-09_at_6.32.36_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/66123d5d-bab9-42cb-a674-2775c5c5ab27/Screen_Shot_2021-06-09_at_6.32.36_PM.png)
 
 Architectural Theory
 
@@ -68,17 +68,17 @@ Architectural Theory
 - nothing is allowed in/out without explicit configuration
 - support hybrid networking - other cloud or on-prem
 - can select default or dedicated tenancy
-  - if you pick dedicated tenancy at VPC level, can be costly
+    - if you pick dedicated tenancy at VPC level, can be costly
 - can use private CIDR and public IPs
 - allocated 1 primary private IPv4 CIDR block
 - min /28 and max /16
 - can add secondary IPv4 blocks
 - can use an IPv6 /56 CIDR block
-  - IPv6 are public
+    - IPv6 are public
 - VPCs use DNS provided by Route 53
 - 2 DNS options that are important
-  - `enableDnsHostnames` - gives instances DNS names
-  - `enableDNSSupport` - enables DNS resolution in VPC
+    - `enableDnsHostnames` - gives instances DNS names
+    - `enableDNSSupport` - enables DNS resolution in VPC
 
 ---
 
@@ -98,14 +98,14 @@ Concepts
 Reserved IP addresses
 
 - 5 in total
-  - Network address = first address
-  - 'network +1' = VPC Router
-  - 'network+2' = reserved for DNS
-  - 'network+3' = reserved for future use
-  - broadcast address = last IP in subnet
+    - Network address = first address
+    - 'network +1' = VPC Router
+    - 'network+2' = reserved for DNS
+    - 'network+3' = reserved for future use
+    - broadcast address = last IP in subnet
 - for every VPC a DHCP option set is created
-  - can config auto assign IPv4 addresses
-  - can config auto assign IPv6 addresses
+    - can config auto assign IPv4 addresses
+    - can config auto assign IPv6 addresses
 
 ---
 
@@ -127,7 +127,9 @@ Internet Gateway
 
 Concepts
 
-- content
+- type of security filter(like firewalls) which can filter traffic as it enters or leaves a subnet
+- are attached to subnets and only filter data as it crosses the subnet boundary
+- are stateless and see initiation and response phases of connections as 2 separate streams requiring 2 roles - in and out
 
 ---
 
