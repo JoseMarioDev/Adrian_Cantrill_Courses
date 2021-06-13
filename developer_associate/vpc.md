@@ -113,13 +113,46 @@ Reserved IP addresses
 
 Concepts
 
-Route Tables
-
-Routes
-
-Associations
+- every VPC has a VPC router
+    - routes traffic from somewhere to somewhere else
+    - runs in every AZ
+- routes traffic between subnets in a VPC
+- controlled by route table
+- created with main route table
+    - can only have 1 associated route table
+- higher prefix value → more specific → highest priority
 
 Internet Gateway
+
+- regionally resilient gateway
+    - has a 1:1 relationship with a VPC
+    - runs from border within AWS public zone
+- runs from border within AWS public zone
+- gateways traffic between the VPC and the internet or AWS Public Zones(S3, SQS, SNS, etc)
+- is AWS managed
+- using an IGW to connect to internet
+    - create IGW
+    - attach IGW to VPC
+    create custom RT
+    - associate RT
+    - default routes → IGW
+    - subnet allocate IPv4
+
+        ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/580f49ff-a226-4065-98d4-5718146d96b0/Screen_Shot_2021-06-13_at_5.35.47_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/580f49ff-a226-4065-98d4-5718146d96b0/Screen_Shot_2021-06-13_at_5.35.47_PM.png)
+
+IPv4 addresses with a IGW
+
+- the IGW changes the source/destination IPs to make packets routable
+- IPv6 addresses are publicly routable
+
+    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ce23d503-30d2-468d-870d-15c9ddb5c67f/Screen_Shot_2021-06-13_at_5.41.30_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ce23d503-30d2-468d-870d-15c9ddb5c67f/Screen_Shot_2021-06-13_at_5.41.30_PM.png)
+
+Bastion Hosts / Jump Boxes
+
+- is an instance in a public subnet
+- incoming management connections arrive there
+    - then access internal VPC resources
+- often the only way in to a VPC
 
 ---
 
