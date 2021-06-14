@@ -1,6 +1,6 @@
-## 🗒️  Notes
+## 🗒️ Notes
 
-### 💻  **Basics**
+### 💻 **Basics**
 
 Concepts
 
@@ -14,15 +14,15 @@ Concepts
 Types
 
 - default VPC - can only have 1, created by default
-    - config in a very specific way
-    - given a CIDR of 172.31.0.0/16
-    - configured to have one subnet in each AZ of region
-    - each subnet is given a /20 subnet
-    - each VPC is config with a IGW, SG, and NACL
-    - by default, anything placed inside each subnet is given a public IPv4 address
+  - config in a very specific way
+  - given a CIDR of 172.31.0.0/16
+  - configured to have one subnet in each AZ of region
+  - each subnet is given a /20 subnet
+  - each VPC is config with a IGW, SG, and NACL
+  - by default, anything placed inside each subnet is given a public IPv4 address
 - custom VPC
-    - you must config everything
-    - 100% private by default
+  - you must config everything
+  - 100% private by default
 
 ---
 
@@ -35,8 +35,8 @@ Considerations
 - need to decide on CIDR range
 - what size should the VPC be?
 - are there other networks we need to use?
-    - ranges other networks use
-    - try to predict the future
+  - ranges other networks use
+  - try to predict the future
 - VPC structure
 - VPC minimum size /28(16 IPs)
 - VPC maximum /16(65,456 IPs)
@@ -60,7 +60,7 @@ Concepts
 - [AWS docs on VPC limits](https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html)
 - what we'll be building for this course
 
-    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/66123d5d-bab9-42cb-a674-2775c5c5ab27/Screen_Shot_2021-06-09_at_6.32.36_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/66123d5d-bab9-42cb-a674-2775c5c5ab27/Screen_Shot_2021-06-09_at_6.32.36_PM.png)
+  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/66123d5d-bab9-42cb-a674-2775c5c5ab27/Screen_Shot_2021-06-09_at_6.32.36_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/66123d5d-bab9-42cb-a674-2775c5c5ab27/Screen_Shot_2021-06-09_at_6.32.36_PM.png)
 
 Architectural Theory
 
@@ -68,17 +68,17 @@ Architectural Theory
 - nothing is allowed in/out without explicit configuration
 - support hybrid networking - other cloud or on-prem
 - can select default or dedicated tenancy
-    - if you pick dedicated tenancy at VPC level, can be costly
+  - if you pick dedicated tenancy at VPC level, can be costly
 - can use private CIDR and public IPs
 - allocated 1 primary private IPv4 CIDR block
 - min /28 and max /16
 - can add secondary IPv4 blocks
 - can use an IPv6 /56 CIDR block
-    - IPv6 are public
+  - IPv6 are public
 - VPCs use DNS provided by Route 53
 - 2 DNS options that are important
-    - `enableDnsHostnames` - gives instances DNS names
-    - `enableDNSSupport` - enables DNS resolution in VPC
+  - `enableDnsHostnames` - gives instances DNS names
+  - `enableDNSSupport` - enables DNS resolution in VPC
 
 ---
 
@@ -98,14 +98,14 @@ Concepts
 Reserved IP addresses
 
 - 5 in total
-    - Network address = first address
-    - 'network +1' = VPC Router
-    - 'network+2' = reserved for DNS
-    - 'network+3' = reserved for future use
-    - broadcast address = last IP in subnet
+  - Network address = first address
+  - 'network +1' = VPC Router
+  - 'network+2' = reserved for DNS
+  - 'network+3' = reserved for future use
+  - broadcast address = last IP in subnet
 - for every VPC a DHCP option set is created
-    - can config auto assign IPv4 addresses
-    - can config auto assign IPv6 addresses
+  - can config auto assign IPv4 addresses
+  - can config auto assign IPv6 addresses
 
 ---
 
@@ -114,44 +114,44 @@ Reserved IP addresses
 Concepts
 
 - every VPC has a VPC router
-    - routes traffic from somewhere to somewhere else
-    - runs in every AZ
+  - routes traffic from somewhere to somewhere else
+  - runs in every AZ
 - routes traffic between subnets in a VPC
 - controlled by route table
 - created with main route table
-    - can only have 1 associated route table
+  - can only have 1 associated route table
 - higher prefix value → more specific → highest priority
 
 Internet Gateway
 
 - regionally resilient gateway
-    - has a 1:1 relationship with a VPC
-    - runs from border within AWS public zone
+  - has a 1:1 relationship with a VPC
 - runs from border within AWS public zone
 - gateways traffic between the VPC and the internet or AWS Public Zones(S3, SQS, SNS, etc)
 - is AWS managed
 - using an IGW to connect to internet
-    - create IGW
-    - attach IGW to VPC
-    create custom RT
-    - associate RT
-    - default routes → IGW
-    - subnet allocate IPv4
 
-        ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/580f49ff-a226-4065-98d4-5718146d96b0/Screen_Shot_2021-06-13_at_5.35.47_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/580f49ff-a226-4065-98d4-5718146d96b0/Screen_Shot_2021-06-13_at_5.35.47_PM.png)
+  - create IGW
+  - attach IGW to VPC
+    create custom RT
+  - associate RT
+  - default routes → IGW
+  - subnet allocate IPv4
+
+    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/580f49ff-a226-4065-98d4-5718146d96b0/Screen_Shot_2021-06-13_at_5.35.47_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/580f49ff-a226-4065-98d4-5718146d96b0/Screen_Shot_2021-06-13_at_5.35.47_PM.png)
 
 IPv4 addresses with a IGW
 
 - the IGW changes the source/destination IPs to make packets routable
 - IPv6 addresses are publicly routable
 
-    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ce23d503-30d2-468d-870d-15c9ddb5c67f/Screen_Shot_2021-06-13_at_5.41.30_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ce23d503-30d2-468d-870d-15c9ddb5c67f/Screen_Shot_2021-06-13_at_5.41.30_PM.png)
+  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ce23d503-30d2-468d-870d-15c9ddb5c67f/Screen_Shot_2021-06-13_at_5.41.30_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ce23d503-30d2-468d-870d-15c9ddb5c67f/Screen_Shot_2021-06-13_at_5.41.30_PM.png)
 
 Bastion Hosts / Jump Boxes
 
 - is an instance in a public subnet
 - incoming management connections arrive there
-    - then access internal VPC resources
+  - then access internal VPC resources
 - often the only way in to a VPC
 
 ---
@@ -160,6 +160,7 @@ Bastion Hosts / Jump Boxes
 
 Concepts
 
+- SAAC02 shared content
 - type of security filter(like firewalls) which can filter traffic as it enters or leaves a subnet
 - are attached to subnets and only filter data as it crosses the subnet boundary
 - are stateless and see initiation and response phases of connections as 2 separate streams requiring 2 roles - in and out
@@ -170,20 +171,12 @@ Concepts
 
 Concepts
 
-- content
+- SAAC02 shared content
 
 ---
 
-### ☁️ Network Address Translation & NAT Gateway - Part 1
+### ☁️ Network Address Translation & NAT Gateway
 
 Concepts
 
-- content
-
----
-
-### ☁️ Network Address Translation & NAT Gateway - Part 2
-
-Concepts
-
-- content
+- SAAC02 shared content
