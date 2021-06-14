@@ -50,3 +50,141 @@ Connections
   - SSH on Linux. port 22
 - use SSH key pair
   - public and private parts
+
+---
+
+🖥️ Virtualization 101
+
+Concepts
+
+- SAAC02 Shared Content
+
+---
+
+🖥️ EC2 Architecture and Resilience
+
+Concepts
+
+- SAAC02 Shared Content
+
+---
+
+🖥️. Storage Refresher
+
+Concepts
+
+- SAAC02 Shared Content
+
+---
+
+🖥️ Elastic Block Store(EBS) Service Architecture
+
+Concepts
+
+- SAAC02 Shared Content
+
+---
+
+🖥️. EBS Volume Types - General Purpose
+
+Concepts
+
+- SAAC02 Shared Content
+
+---
+
+🖥️. EBS Volume Types - Provisioned IOPS
+
+Concepts
+
+- SAAC02 Shared Content
+
+---
+
+🖥️. EBS Volume Types - HDD Based
+
+Concepts
+
+- SAAC02 Shared Content
+
+---
+
+🖥️. Instance Store Volumes - Architecture
+
+Concepts
+
+- SAAC02 Shared Content
+
+---
+
+🖥️. Choosing Between the EC2 Instance Store and EBS
+
+Concepts
+
+- SAAC02 Shared Content
+
+---
+
+🖥️. Snapshots, Restore, & Fast Snapshot Restore(FSR)
+
+Concepts
+
+- SAAC02 Shared Content
+
+---
+
+🖥️. EBS Encryption(Theory & Demo)
+
+Concepts
+
+- ***
+
+🖥️. Network Interfaces, Instance IPs, and DNS
+
+Concepts
+
+- SAAC02 Shared Content
+
+---
+
+🖥️. Amazon Machine Images(AMI)
+
+Concepts
+
+- SAAC02 Shared Content
+
+---
+
+🖥️. EC2 Purchase Options
+
+Concepts
+
+- ***
+
+🖥️. Reserved Instances - the rest
+
+Concepts
+
+- ***
+
+🖥️. Instance Status Checks & Auto Recovery
+
+Concepts
+
+- SAAC02 Shared Content
+
+---
+
+🖥️. Horizontal & Vertical Scaling
+
+Concepts
+
+- SAAC02 Shared Content
+
+---
+
+🖥️. Instance Metadata(Theory & Demo)
+
+Concepts
+
+-
