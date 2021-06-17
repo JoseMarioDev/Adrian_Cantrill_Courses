@@ -110,3 +110,27 @@ Exam Power Up
 - a cost can be associated
 - IAM, STS, Cloudront - global service events, log to `us-east-1`
 - not real time, up to 15 minute delay
+
+---
+
+### 🔍 CloudWatch Architecture
+
+Concepts
+
+- notes
+
+---
+
+### 🔍 CloudWatch Logs Architecture
+
+Concepts
+
+- notes
+
+---
+
+### 🔍 AWS X-Ray
+
+Concepts
+
+- notes
