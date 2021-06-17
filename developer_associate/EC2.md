@@ -211,19 +211,19 @@ Concepts
 
 On-Demand
 
--
+- notes
 
 Reserved
 
--
+- notes
 
 Dedicated Instance
 
--
+- notes
 
 Dedicated Host
 
--
+- notes
 
 ---
 
