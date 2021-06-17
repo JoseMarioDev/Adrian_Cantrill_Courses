@@ -281,9 +281,28 @@ Dedicated Instance
 
 🖥️. Reserved Instances - the rest
 
-Concepts
+Scheduled Reserved Instances
 
--
+- ideal for long term usage which doesn't run constantly
+- slightly cheaper, can only use during time window you specify
+
+  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a96dc296-05de-4124-9586-6262ed7aa9e9/Screen_Shot_2021-06-17_at_5.06.25_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a96dc296-05de-4124-9586-6262ed7aa9e9/Screen_Shot_2021-06-17_at_5.06.25_PM.png)
+
+Capacity Reservations
+
+- can reserve instances in a region
+- can pick zonal reservation - in a specific AZ
+- on demand capacity reservations - ensure you always have access to capacity in AZ
+
+  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2f4e6cfa-4c59-4b84-9b14-d38416531dc6/Screen_Shot_2021-06-17_at_5.09.51_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2f4e6cfa-4c59-4b84-9b14-d38416531dc6/Screen_Shot_2021-06-17_at_5.09.51_PM.png)
+
+EC2 Savings Plan
+
+- hourly commitment for 1 or 3 year term
+- can make a reservation of general compute $ amounts
+- or a specific EC2 savings plan - flexible on size and OS
+
+  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/963d543b-8871-4927-8886-ce4ad22ed2c7/Screen_Shot_2021-06-17_at_5.11.54_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/963d543b-8871-4927-8886-ce4ad22ed2c7/Screen_Shot_2021-06-17_at_5.11.54_PM.png)
 
 ---
 
@@ -307,4 +326,4 @@ Concepts
 
 Concepts
 
--
+- SAAC02 Shared Content
