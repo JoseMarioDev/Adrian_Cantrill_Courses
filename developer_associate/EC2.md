@@ -208,22 +208,74 @@ Concepts
 Concepts
 
 - there are a number of diff EC2 purchase options, with diff mechanics and use cases
+- aka Launch Types
 
 On-Demand
 
-- notes
+- default - average of everything
+- per-second billing while instance is running
+- associated resources such as storage are billed
+- no interruption
+- no capacity reservation
+- predictable pricing
+- no upfront costs
+- no discount
+- best for:
+
+  - short term workloads
+  - unknown workloads
+  - apps which cant be interrupted
+  -
+
+  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e9ea3195-1765-44f9-95b3-8fa4908b595b/Screen_Shot_2021-06-17_at_4.45.08_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e9ea3195-1765-44f9-95b3-8fa4908b595b/Screen_Shot_2021-06-17_at_4.45.08_PM.png)
+
+Spot
+
+- is AWS selling unused EC2 host capacity for up to 90% discount
+- spot price is based on the spare capacity at any given time
+- if spot price is higher than your max price, your instances are terminated
+- never use for workloads that can't tolerate interruptions
+- good for non time critical
+- anything that can be rerun
+- burst capacity needs
+- cost sensitive workloads
+- anything that is stateless
+
+  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/aaaf216b-2b66-41df-b295-8e675d0c88b5/Screen_Shot_2021-06-17_at_4.51.01_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/aaaf216b-2b66-41df-b295-8e675d0c88b5/Screen_Shot_2021-06-17_at_4.51.01_PM.png)
 
 Reserved
 
-- notes
+- for long term instance usage
+- reduce per-second cost or remove it entirely
+- need to plan appropriately, you pay for any non-usage
+- can commit for either 1 year or 3 years
+- diff payment structures
 
-Dedicated Instance
+  - no upfront - some savings for agreeing to the terms
+  - pay all upfront - greater discount
+  - partial upfront - middle ground
 
-- notes
+  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fe5d8665-e847-43e7-a93b-ae967c69bd12/Screen_Shot_2021-06-17_at_4.57.08_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fe5d8665-e847-43e7-a93b-ae967c69bd12/Screen_Shot_2021-06-17_at_4.57.08_PM.png)
 
 Dedicated Host
 
-- notes
+- Host that is allocated to you in it's entirety
+- pay for host itself
+- come with all resources you'd expect from a machine
+- you pay for the host - no per-second charge
+- you manage the capacity
+- use for license based software
+- use for host affinity
+
+  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f569f5ee-c615-4ee2-8092-9a25b70a775d/Screen_Shot_2021-06-17_at_4.59.47_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f569f5ee-c615-4ee2-8092-9a25b70a775d/Screen_Shot_2021-06-17_at_4.59.47_PM.png)
+
+Dedicated Instance
+
+- middle ground - instances run on EC2 hosts that you have for yourself
+- pay hourly fee
+- fee for instances
+
+  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7ed73b0a-1393-4e6f-a08a-59320938c93c/Screen_Shot_2021-06-17_at_5.02.10_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7ed73b0a-1393-4e6f-a08a-59320938c93c/Screen_Shot_2021-06-17_at_5.02.10_PM.png)
 
 ---
 
