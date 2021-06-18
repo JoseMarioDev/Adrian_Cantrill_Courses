@@ -117,7 +117,27 @@ Exam Power Up
 
 Concepts
 
-- notes
+- product that ingests, stores, and manages metrics
+  - think metrics
+- public service - public endpoint
+- need to integrate
+- can use CW Agent ex: EC2 use for richer metrics
+- can use on prem via agent/api
+- can deliver custom metrics
+- can provide alarms that react to metrics
+
+Visually
+
+- CW sits in public zone and records metrics
+- services in VPCs can publish data into CW
+  - via GW or interface endpoint
+- alarms can create actions like SNS notifications, ASG scaling, Eventbridge events
+
+  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/08f6f702-6c45-4518-990f-bd600b9c36e4/Screen_Shot_2021-06-18_at_1.57.54_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/08f6f702-6c45-4518-990f-bd600b9c36e4/Screen_Shot_2021-06-18_at_1.57.54_PM.png)
+
+Data
+
+-
 
 ---
 
@@ -125,7 +145,13 @@ Concepts
 
 Concepts
 
-- notes
+- Namespace = container for metrics eg: AWS/EC2 or AWS/Lambda
+- Datapoint = timestamp, value, unit of measure(optional)
+- Metric = time ordered set of data points ex: CPUUtlization, NetworkIn
+  - every metric has a MetricName and Namespace
+- Dimension = name/value pair
+
+  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f0c6f71c-d08f-42d9-b6d3-a9783acd507a/Screen_Shot_2021-06-18_at_2.15.23_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f0c6f71c-d08f-42d9-b6d3-a9783acd507a/Screen_Shot_2021-06-18_at_2.15.23_PM.png)
 
 ---
 
