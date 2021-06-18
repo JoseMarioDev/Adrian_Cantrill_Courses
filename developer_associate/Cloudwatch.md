@@ -137,14 +137,6 @@ Visually
 
 Data
 
--
-
----
-
-### 🔍 CloudWatch Logs Architecture
-
-Concepts
-
 - Namespace = container for metrics eg: AWS/EC2 or AWS/Lambda
 - Datapoint = timestamp, value, unit of measure(optional)
 - Metric = time ordered set of data points ex: CPUUtlization, NetworkIn
@@ -152,6 +144,30 @@ Concepts
 - Dimension = name/value pair
 
   ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f0c6f71c-d08f-42d9-b6d3-a9783acd507a/Screen_Shot_2021-06-18_at_2.15.23_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f0c6f71c-d08f-42d9-b6d3-a9783acd507a/Screen_Shot_2021-06-18_at_2.15.23_PM.png)
+
+- Resolution = standard(60s granularity). min time period you can get one datapoint for
+- Retention = see slide
+- Statistics = aggregate data over a period /image
+- Percentile = relative standing of data in a value set
+
+  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/60c26693-5997-40ad-a22c-a4944a3a4e3a/Screen_Shot_2021-06-18_at_2.22.12_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/60c26693-5997-40ad-a22c-a4944a3a4e3a/Screen_Shot_2021-06-18_at_2.22.12_PM.png)
+
+Alarms
+
+- watches a metric over a given time period
+- state will either be `Alarm` or `OK`
+- can be config with one or more action
+- can specify alarm resolution
+
+Alarms Visually
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3af3aba3-82f8-405e-a1c2-cafb1b2f87d5/Screen_Shot_2021-06-18_at_2.25.54_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3af3aba3-82f8-405e-a1c2-cafb1b2f87d5/Screen_Shot_2021-06-18_at_2.25.54_PM.png)
+
+---
+
+### 🔍 CloudWatch Logs Architecture
+
+Concepts
 
 ---
 
