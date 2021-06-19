@@ -169,6 +169,55 @@ Alarms Visually
 
 Concepts
 
+- is a product which can store, manage, provide access to logging data for on-prem and AWS environments including systems and apps
+- has 2 sides - ingestion and subscription
+- via subscription, can also filter streams of data to Lambda, Elasticsearch, Kinesis and firehose
+- metric filters can be used to generate metrics with CW, alarms, and events with Eventbridge
+
+Ingestion
+
+- supports AWS services natively, but if you want to ingest data from apps, need to use CWAgent
+- can support VPC, Cloudtrail, Elastic Beanstalk, ECS, API GW, Lambda, Route 53
+
+  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ffb24b4d-89d7-4291-9fed-11ff91ea627a/Screen_Shot_2021-06-19_at_10.52.44_AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ffb24b4d-89d7-4291-9fed-11ff91ea627a/Screen_Shot_2021-06-19_at_10.52.44_AM.png)
+
+Architecture
+
+- sends data to the region it's in
+- log events consist of timestamp and message
+- events are stored in log streams
+- log streams are in a log group - log events from same source
+- set retention, permissions, encryption on log groups
+- metric filters defined on log groups, can trigger alarms
+- can export to S3, but not in real time
+
+  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6aee9616-d9dc-44da-9ce0-e602b9bbc7cb/Screen_Shot_2021-06-19_at_10.56.55_AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6aee9616-d9dc-44da-9ce0-e602b9bbc7cb/Screen_Shot_2021-06-19_at_10.56.55_AM.png)
+
+Subscriptions
+
+- can use subscriptions for real time or near real time logging
+- log group sends data to a subscription
+- subscription sends data to other sources like Kinesis, Lambda, Elasticsearch
+
+  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/aabebbca-4947-4aae-aaeb-25645dcdf69f/Screen_Shot_2021-06-19_at_10.59.37_AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/aabebbca-4947-4aae-aaeb-25645dcdf69f/Screen_Shot_2021-06-19_at_10.59.37_AM.png)
+
+Aggregation
+
+- can use subscriptions to aggregate data from multiple logs
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3e6cdec2-94f3-42f8-93e5-174e489ce4a2/Screen_Shot_2021-06-19_at_11.00.48_AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3e6cdec2-94f3-42f8-93e5-174e489ce4a2/Screen_Shot_2021-06-19_at_11.00.48_AM.png)
+
+Summary
+
+- for any log solutions should default to CW logs
+- can export to S3 but not real time
+- for real time use subscriptions to Kinesis datastream or Lambda
+- near realtime use Kinesis Firehose
+- can also send to Elasticsearch using Lambda
+- can use metric filters
+
+  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ccea43a3-0269-4c80-9f5a-4968e8346c45/Screen_Shot_2021-06-19_at_11.02.40_AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ccea43a3-0269-4c80-9f5a-4968e8346c45/Screen_Shot_2021-06-19_at_11.02.40_AM.png)
+
 ---
 
 ### 🔍 AWS X-Ray
