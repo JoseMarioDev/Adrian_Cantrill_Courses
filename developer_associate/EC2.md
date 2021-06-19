@@ -327,3 +327,51 @@ Concepts
 Concepts
 
 - SAAC02 Shared Content
+
+---
+
+🖥️. Bootstrapping EC2 using User Data
+
+Concepts
+
+- SAAC02 Shared Content
+
+---
+
+🖥️. EC2 Instance Roles & Profile
+
+Concepts
+
+- SAAC02 Shared Content
+
+---
+
+🖥️. SSM Parameter Store
+
+Concepts
+
+- SAAC02 Shared Content
+
+---
+
+🖥️. System and Application Logging on EC2
+
+Concepts
+
+- SAAC02 Shared Content
+
+---
+
+🖥️. EC2 Placement Groups
+
+Concepts
+
+-
+
+---
+
+🖥️. Enhanced Networking & EBS Optimized
+
+Concepts
+
+-
