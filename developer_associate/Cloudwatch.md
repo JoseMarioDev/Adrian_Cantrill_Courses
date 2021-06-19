@@ -224,4 +224,41 @@ Summary
 
 Concepts
 
-- notes
+- helps devs analyze, debug production, distributed apps such as those built using microservices architecture
+- helps you understand how your app and underlying services are performing to identify and troubleshoot the root cause of performance issues and errors
+- provides an end-to-end view of requests as they travel through your app
+- shows a map of app's underlying components
+- tracks sessions through an application
+  - takes data from all services and gives you an overview
+- generates an ID and tracing header
+- creates segments that are sent to X-Ray
+- can create subsegments for more granular view
+- X-Ray generates a Service Graph that shows how app is made up
+- Graph is turned into a Service Map - visual representation of the service graph showing traces
+
+  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ab073d61-d92d-4513-9cfc-9f4354ee8785/Screen_Shot_2021-06-19_at_11.11.48_AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ab073d61-d92d-4513-9cfc-9f4354ee8785/Screen_Shot_2021-06-19_at_11.11.48_AM.png)
+
+Service Map
+
+- generates tracing header to track performance of session through applilcation
+- shows the flow, response time, requests, any errors or issues, etc
+
+  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b60e64cc-45ee-43b2-a895-74a69e18120e/Screen_Shot_2021-06-19_at_11.13.36_AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b60e64cc-45ee-43b2-a895-74a69e18120e/Screen_Shot_2021-06-19_at_11.13.36_AM.png)
+
+Installation and Usage
+
+- EC2 - X-Ray agent
+- ECS - Agent in tasks
+- Lambda - enable option
+- Beanstalk - agent preinstalled
+- API GW - per stage option
+- SNS & SQS
+- all require IAM permissions
+
+---
+
+🔍 VPC Flow Logs
+
+Concepts
+
+- SAAC02 Shared
