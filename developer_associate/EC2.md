@@ -366,7 +366,63 @@ Concepts
 
 Concepts
 
--
+- [link to AWS doc on EC2 placement groups](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html)
+- three diff types of placement groups available
+  - cluster - performance
+  - spread - resilience
+  - partition - topology awareness
+
+Cluster
+
+- highest level of performance
+- launch all instances in group at same time
+- use same type of instance and launch them at same time
+- launched in same AZ
+- same rack and sometimes same host
+- all members have direct connections to each other
+- lowest latency possible and max packet-per-second possible
+- can't span AZs. only one AZ locked when launching first instance
+- can span VPC peers, but impacts performance
+- requires supported instance type
+- should use same type of instance
+- should launch at same time - recommended
+- offer 10Gbps single stream performance
+- use cases: performance, fast speed, low latency
+
+  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f3e2e761-1033-458f-9eeb-ea08a49d8316/Screen_Shot_2021-06-20_at_11.38.28_AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f3e2e761-1033-458f-9eeb-ea08a49d8316/Screen_Shot_2021-06-20_at_11.38.28_AM.png)
+
+Spread
+
+- can span multiple AZs
+- instance on separate racks
+- limit to 7 instances per AZ
+
+  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8f88bf44-f38a-4f94-8370-39fdbd14a2b2/Screen_Shot_2021-06-20_at_11.41.41_AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8f88bf44-f38a-4f94-8370-39fdbd14a2b2/Screen_Shot_2021-06-20_at_11.41.41_AM.png)
+
+- provides infrastructure isolation
+- each instance run from diff rack
+- each rack has it's own network and power source
+- 7 instances per AZ - hard limit
+- not supported for dedicated instances or dedicated hosts
+- use case: small num of critical instances that need to be kept separate
+
+Partition
+
+- similar to spread
+- when you need more than 7 instances per AZ but still need to spread out
+- each AZ is separated in partitions
+- each partition can have as many instances as you want
+- each partition has it's own racks - no sharing between partitions
+- designed for huge scale parallel processing systems
+
+  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5a1c0d21-7ee2-4704-b3ca-cf94a2d0a914/Screen_Shot_2021-06-20_at_11.58.23_AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5a1c0d21-7ee2-4704-b3ca-cf94a2d0a914/Screen_Shot_2021-06-20_at_11.58.23_AM.png)
+
+- 7 partitions per AZ
+- instances can be placed in a specific partitions
+  - or auto placed
+- great for topology aware apps
+  - HDFS, HBASE, Cassandra
+- contain the impact of failure to part of an application
 
 ---
 
