@@ -40,3 +40,139 @@ How it works
 
 - creates a stack of resources based from template
 - keeps logical and physical resources in sync
+
+---
+
+### 🏫 CloudFormation Physical & Logical Resources
+
+Concepts
+
+- notes
+
+---
+
+### 🏫 CloudFormation Template and Pseudo Parameters
+
+Concepts
+
+- notes
+
+---
+
+### 🏫 CloudFormation Intrinsic Functions
+
+Concepts
+
+- notes
+
+---
+
+### 🏫 CloudFormation Mappings
+
+Concepts
+
+- notes
+
+---
+
+### 🏫 CloudFormation Outputs
+
+Concepts
+
+- notes
+
+---
+
+### 🏫 CloudFormation Conditions
+
+Concepts
+
+- notes
+
+---
+
+### 🏫 CloudFormation DependsOn
+
+Concepts
+
+- notes
+
+---
+
+### 🏫 CloudFormation Wait Conditions & cfn-signal
+
+Concepts
+
+- notes
+
+---
+
+### 🏫 CloudFormation Nested Stacks
+
+Concepts
+
+- notes
+
+---
+
+### 🏫 CloudFormation Cross-Stack References
+
+Concepts
+
+- notes
+
+---
+
+### 🏫 CloudFormation Stack Sets
+
+Concepts
+
+- notes
+
+---
+
+### 🏫 CloudFormation Deletion Policy
+
+Concepts
+
+- notes
+
+---
+
+### 🏫 CloudFormation Stack Roles
+
+Concepts
+
+- notes
+
+---
+
+### 🏫 CloudFormation Init (CFN-INIT)
+
+Concepts
+
+- notes
+
+---
+
+### 🏫 CloudFormation cfn-hup
+
+Concepts
+
+- notes
+
+---
+
+### 🏫 CloudFormation ChangeSets
+
+Concepts
+
+- notes
+
+---
+
+### 🏫 CloudFormation Custom Resources
+
+Concepts
+
+- notes
