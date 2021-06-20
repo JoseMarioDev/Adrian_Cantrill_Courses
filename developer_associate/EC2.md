@@ -430,4 +430,26 @@ Partition
 
 Concepts
 
--
+- AWS implementation of SR-IOV, a standard allowing a physical host network card to present many logical devices which can be used directly by instances
+- lower host CPU usage, better throughput, lower and consistent latency
+- EBS optimization on instances means dedicated bandwidth for storage networking - separate from data networking
+- [AWS doc on enhanced networking](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/enhanced-networking.html)
+
+Enhanced Networking
+
+- single root IO virtualization
+- is how NIC is aware of virtualization - see slide for image
+- higher IO and lower host CPU usage
+- no charge
+- more bandwidth
+- higher packet per second - PPS
+- consistent lower latency
+
+  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7ec73222-1738-4f1d-9811-9b2c9aaf2df7/Screen_Shot_2021-06-20_at_12.07.34_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7ec73222-1738-4f1d-9811-9b2c9aaf2df7/Screen_Shot_2021-06-20_at_12.07.34_PM.png)
+
+EBS Optimized Instances
+
+- is an option set on per instance basis
+- means there is a dedicated capacity for EBS
+- most instances are supported and enabled by default
+- older instances - some support but enabling is extra
