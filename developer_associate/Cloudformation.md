@@ -47,7 +47,11 @@ How it works
 
 Concepts
 
-- notes
+- CFN defines physical and logical resources within templates
+- using either YAML or JSON
+- logical resource defines WHAT and leave the HOW up to the CFN product
+- a CFN stack creates a physical resource for every logical resource
+  - updating or deleting them as a template changes
 
 ---
 
