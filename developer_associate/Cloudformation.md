@@ -61,13 +61,19 @@ Concepts
 
     ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/256914b1-2e5c-4eab-9553-e233c2301e95/Screen_Shot_2021-06-23_at_10.56.15_AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/256914b1-2e5c-4eab-9553-e233c2301e95/Screen_Shot_2021-06-23_at_10.56.15_AM.png)
 
+Demo
+
+- [AWS doc on resource and property types support by AWS CFN](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html)
+- demo you will learn the negatives of non-portable templates
+
 ---
 
 ### 🏫 CloudFormation Template and Pseudo Parameters
 
 Concepts
 
-- notes
+- are two methods to provide input to a template, which can influence what resources  are provisioned and the configuration of resources
+- [AWS link to docs](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/pseudo-parameter-reference.html)
 
 ---
 
