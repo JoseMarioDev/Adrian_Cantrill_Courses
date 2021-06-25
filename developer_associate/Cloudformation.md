@@ -1,4 +1,4 @@
-## 🗒️  Notes
+## 🗒️ Notes
 
 ### Basics
 
@@ -11,29 +11,30 @@ Concepts
 
 Template Body
 
-- *Resources*
-    - what is is your are creating. ex: EC2 instance, S3 bucket, etc
-    - resource part is the only part of a template that is mandatory
-- *Description*
-    - free text field to give details about template
-    - Description must immediately AWS template version is using it
+- _Resources_
+  - what is is your are creating. ex: EC2 instance, S3 bucket, etc
+  - resource part is the only part of a template that is mandatory
+- _Description_
 
-    ```jsx
-    AWSTemplateFormatVersion
-    ```
+  - free text field to give details about template
+  - Description must immediately AWS template version is using it
 
-- *Metadata*
-    - control how diff things in template are presented in the console
-    - controls how UI presents the template
-- *Parameters*
-    - add fields to prompt user for more info
-- *Mappings*
-    - optional - allows to create look up tables
-- *Conditions*
-    - allow decision making in template
-    - create condition, then what
-- *Outputs*
-    - presents what is being created, updated, or deleted
+  ```jsx
+  AWSTemplateFormatVersion;
+  ```
+
+- _Metadata_
+  - control how diff things in template are presented in the console
+  - controls how UI presents the template
+- _Parameters_
+  - add fields to prompt user for more info
+- _Mappings_
+  - optional - allows to create look up tables
+- _Conditions_
+  - allow decision making in template
+  - create condition, then what
+- _Outputs_
+  - presents what is being created, updated, or deleted
 
 How it works
 
@@ -50,21 +51,23 @@ Concepts
 - using either YAML or JSON
 - logical resource defines WHAT and leave the HOW up to the CFN product
 - a CFN stack creates a physical resource for every logical resource
-    - updating or deleting them as a template changes1
+  - updating or deleting them as a template changes1
 - templates are used to create stacks
-    - stacks create physical resources from the logical resources in a template
 
-        ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1c8618ee-296a-423c-b86f-f340069936c7/Screen_Shot_2021-06-23_at_10.54.47_AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1c8618ee-296a-423c-b86f-f340069936c7/Screen_Shot_2021-06-23_at_10.54.47_AM.png)
+  - stacks create physical resources from the logical resources in a template
+
+    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1c8618ee-296a-423c-b86f-f340069936c7/Screen_Shot_2021-06-23_at_10.54.47_AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1c8618ee-296a-423c-b86f-f340069936c7/Screen_Shot_2021-06-23_at_10.54.47_AM.png)
 
 - can use a template to update a stack
 - if you delete stack, the logical resources are deleted, so are the physical
 
-    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/256914b1-2e5c-4eab-9553-e233c2301e95/Screen_Shot_2021-06-23_at_10.56.15_AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/256914b1-2e5c-4eab-9553-e233c2301e95/Screen_Shot_2021-06-23_at_10.56.15_AM.png)
+  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/256914b1-2e5c-4eab-9553-e233c2301e95/Screen_Shot_2021-06-23_at_10.56.15_AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/256914b1-2e5c-4eab-9553-e233c2301e95/Screen_Shot_2021-06-23_at_10.56.15_AM.png)
 
 Demo
 
 - [AWS doc on resource and property types support by AWS CFN](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html)
 - demo you will learn the negatives of non-portable templates
+- ex in demo: the bucket name for the bucket we're trying to create is already taken
 
 ---
 
@@ -72,8 +75,28 @@ Demo
 
 Concepts
 
-- are two methods to provide input to a template, which can influence what resources  are provisioned and the configuration of resources
+- are two methods to provide input to a template, which can influence what resources are provisioned and the configuration of resources
 - [AWS link to docs](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/pseudo-parameter-reference.html)
+- let external sources provide input into templates when stack is created or updated
+- can be configured with defaults, allowed values, min/max length, and allowed patterns, no echo, and type
+
+Architecture Visually
+
+- template interacts with the choices made by user or uses the default specified in the template
+
+  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ed85e2de-21d9-4c23-aa6d-f4b0d81951fc/Screen_Shot_2021-06-25_at_9.55.46_AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ed85e2de-21d9-4c23-aa6d-f4b0d81951fc/Screen_Shot_2021-06-25_at_9.55.46_AM.png)
+
+Pseudo Parameters
+
+- AWS makes available that can be used in your template even if you don't define them
+- they are created by AWS
+
+  - AWS::Region
+  - AWS::StackId
+  - AWS::StackName
+  - AWS::AccountId
+
+  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/be2e6adf-b8d3-414d-b73f-6bee51e4483c/Screen_Shot_2021-06-25_at_9.57.53_AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/be2e6adf-b8d3-414d-b73f-6bee51e4483c/Screen_Shot_2021-06-25_at_9.57.53_AM.png)
 
 ---
 
