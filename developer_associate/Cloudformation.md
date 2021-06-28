@@ -107,6 +107,45 @@ Concepts
 - [AWS doc on intrinsic functions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference.html)
 - CFN provides several built-in functions that help you manage your stacks
 - Use intrinsic functions in your templates to assign values to properties that are not available until runtime
+- allow access to data at runtime
+- intrinsic functions:
+
+  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/275515ea-f483-4047-9b17-e1e0b0955743/Screen_Shot_2021-06-28_at_5.14.32_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/275515ea-f483-4047-9b17-e1e0b0955743/Screen_Shot_2021-06-28_at_5.14.32_PM.png)
+
+Ref and GetAtt
+
+- use on template or pseudo parameters to return their value
+- !Ref - when used with logical resources, returns physical ID
+- !GetAtt - used to retrieve any attribute associated with the resource
+
+  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ac9f23bd-78ec-49d9-b482-02acd93be86d/Screen_Shot_2021-06-28_at_5.19.30_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ac9f23bd-78ec-49d9-b482-02acd93be86d/Screen_Shot_2021-06-28_at_5.19.30_PM.png)
+
+GetAZs and Select
+
+- often used together
+- returns list of AZs in a region
+- use Select fn to reference AZ in a list
+
+  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/cc9b8cc3-db63-4c52-a65c-f3ccff3cd81b/Screen_Shot_2021-06-28_at_5.22.04_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/cc9b8cc3-db63-4c52-a65c-f3ccff3cd81b/Screen_Shot_2021-06-28_at_5.22.04_PM.png)
+
+Join and Split
+
+- used to join and split similar to programming
+
+  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a5ae2beb-5da1-46fb-b370-4b0beac6992b/Screen_Shot_2021-06-28_at_5.25.19_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a5ae2beb-5da1-46fb-b370-4b0beac6992b/Screen_Shot_2021-06-28_at_5.25.19_PM.png)
+
+Base64 and Sub
+
+- accepts text and passed output in Base64 encoded text
+- sub allows you to do replacement on variables - think dynamic variable ${ variable }
+
+  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/39bb9104-dd9d-400e-9599-f8d95bc2ec5f/Screen_Shot_2021-06-28_at_5.27.43_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/39bb9104-dd9d-400e-9599-f8d95bc2ec5f/Screen_Shot_2021-06-28_at_5.27.43_PM.png)
+
+Cidr
+
+- provide CIDR range for VPC to use
+
+  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/03cf50b1-b97c-4a7b-929e-53c8f3fa0b12/Screen_Shot_2021-06-28_at_5.29.31_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/03cf50b1-b97c-4a7b-929e-53c8f3fa0b12/Screen_Shot_2021-06-28_at_5.29.31_PM.png)
 
 ---
 
