@@ -153,7 +153,8 @@ Cidr
 
 Concepts
 
-- notes
+- optional section matches a key to a set of named values
+- can use the intrinsic function `!FindInMap` to retrieve values in a map
 
 ---
 
