@@ -162,7 +162,8 @@ Concepts
 
 Concepts
 
-- notes
+- optional `Outputs` section declares output values that you can import into other stacks to create cross-stack references, return in response(to describe stack calls), or view in the AWS CFN console
+- example: you can output the S3 bucket name for a stack to make the bucket easier to find
 
 ---
 
