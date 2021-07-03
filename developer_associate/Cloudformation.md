@@ -1,4 +1,4 @@
-## 🗒️  Notes
+## 🗒️ Notes
 
 ### Basics
 
@@ -11,29 +11,30 @@ Concepts
 
 Template Body
 
-- *Resources*
-    - what is is your are creating. ex: EC2 instance, S3 bucket, etc
-    - resource part is the only part of a template that is mandatory
-- *Description*
-    - free text field to give details about template
-    - Description must immediately AWS template version is using it
+- _Resources_
+  - what is is your are creating. ex: EC2 instance, S3 bucket, etc
+  - resource part is the only part of a template that is mandatory
+- _Description_
 
-    ```jsx
-    AWSTemplateFormatVersion
-    ```
+  - free text field to give details about template
+  - Description must immediately AWS template version is using it
 
-- *Metadata*
-    - control how diff things in template are presented in the console
-    - controls how UI presents the template
-- *Parameters*
-    - add fields to prompt user for more info
-- *Mappings*
-    - optional - allows to create look up tables
-- *Conditions*
-    - allow decision making in template
-    - create condition, then what
-- *Outputs*
-    - presents what is being created, updated, or deleted
+  ```jsx
+  AWSTemplateFormatVersion;
+  ```
+
+- _Metadata_
+  - control how diff things in template are presented in the console
+  - controls how UI presents the template
+- _Parameters_
+  - add fields to prompt user for more info
+- _Mappings_
+  - optional - allows to create look up tables
+- _Conditions_
+  - allow decision making in template
+  - create condition, then what
+- _Outputs_
+  - presents what is being created, updated, or deleted
 
 How it works
 
@@ -50,16 +51,17 @@ Concepts
 - using either YAML or JSON
 - logical resource defines WHAT and leave the HOW up to the CFN product
 - a CFN stack creates a physical resource for every logical resource
-    - updating or deleting them as a template changes1
+  - updating or deleting them as a template changes1
 - templates are used to create stacks
-    - stacks create physical resources from the logical resources in a template
 
-        ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1c8618ee-296a-423c-b86f-f340069936c7/Screen_Shot_2021-06-23_at_10.54.47_AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1c8618ee-296a-423c-b86f-f340069936c7/Screen_Shot_2021-06-23_at_10.54.47_AM.png)
+  - stacks create physical resources from the logical resources in a template
+
+    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1c8618ee-296a-423c-b86f-f340069936c7/Screen_Shot_2021-06-23_at_10.54.47_AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1c8618ee-296a-423c-b86f-f340069936c7/Screen_Shot_2021-06-23_at_10.54.47_AM.png)
 
 - can use a template to update a stack
 - if you delete stack, the logical resources are deleted, so are the physical
 
-    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/256914b1-2e5c-4eab-9553-e233c2301e95/Screen_Shot_2021-06-23_at_10.56.15_AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/256914b1-2e5c-4eab-9553-e233c2301e95/Screen_Shot_2021-06-23_at_10.56.15_AM.png)
+  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/256914b1-2e5c-4eab-9553-e233c2301e95/Screen_Shot_2021-06-23_at_10.56.15_AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/256914b1-2e5c-4eab-9553-e233c2301e95/Screen_Shot_2021-06-23_at_10.56.15_AM.png)
 
 Demo
 
@@ -73,7 +75,7 @@ Demo
 
 Concepts
 
-- are two methods to provide input to a template, which can influence what resources  are provisioned and the configuration of resources
+- are two methods to provide input to a template, which can influence what resources are provisioned and the configuration of resources
 - [AWS link to docs](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/pseudo-parameter-reference.html)
 - let external sources provide input into templates when stack is created or updated
 - can be configured with defaults, allowed values, min/max length, and allowed patterns, no echo, and type
@@ -82,18 +84,19 @@ Architecture Visually
 
 - template interacts with the choices made by user or uses the default specified in the template
 
-    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ed85e2de-21d9-4c23-aa6d-f4b0d81951fc/Screen_Shot_2021-06-25_at_9.55.46_AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ed85e2de-21d9-4c23-aa6d-f4b0d81951fc/Screen_Shot_2021-06-25_at_9.55.46_AM.png)
+  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ed85e2de-21d9-4c23-aa6d-f4b0d81951fc/Screen_Shot_2021-06-25_at_9.55.46_AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ed85e2de-21d9-4c23-aa6d-f4b0d81951fc/Screen_Shot_2021-06-25_at_9.55.46_AM.png)
 
 Pseudo Parameters
 
 - AWS makes available that can be used in your template even if you don't define them
 - they are created by AWS
-    - AWS::Region
-    - AWS::StackId
-    - AWS::StackName
-    - AWS::AccountId
 
-    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/be2e6adf-b8d3-414d-b73f-6bee51e4483c/Screen_Shot_2021-06-25_at_9.57.53_AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/be2e6adf-b8d3-414d-b73f-6bee51e4483c/Screen_Shot_2021-06-25_at_9.57.53_AM.png)
+  - AWS::Region
+  - AWS::StackId
+  - AWS::StackName
+  - AWS::AccountId
+
+  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/be2e6adf-b8d3-414d-b73f-6bee51e4483c/Screen_Shot_2021-06-25_at_9.57.53_AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/be2e6adf-b8d3-414d-b73f-6bee51e4483c/Screen_Shot_2021-06-25_at_9.57.53_AM.png)
 
 ---
 
@@ -107,7 +110,7 @@ Concepts
 - allow access to data at runtime
 - intrinsic functions:
 
-    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/275515ea-f483-4047-9b17-e1e0b0955743/Screen_Shot_2021-06-28_at_5.14.32_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/275515ea-f483-4047-9b17-e1e0b0955743/Screen_Shot_2021-06-28_at_5.14.32_PM.png)
+  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/275515ea-f483-4047-9b17-e1e0b0955743/Screen_Shot_2021-06-28_at_5.14.32_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/275515ea-f483-4047-9b17-e1e0b0955743/Screen_Shot_2021-06-28_at_5.14.32_PM.png)
 
 Ref and GetAtt
 
@@ -115,7 +118,7 @@ Ref and GetAtt
 - !Ref - when used with logical resources, returns physical ID
 - !GetAtt - used to retrieve any attribute associated with the resource
 
-    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ac9f23bd-78ec-49d9-b482-02acd93be86d/Screen_Shot_2021-06-28_at_5.19.30_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ac9f23bd-78ec-49d9-b482-02acd93be86d/Screen_Shot_2021-06-28_at_5.19.30_PM.png)
+  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ac9f23bd-78ec-49d9-b482-02acd93be86d/Screen_Shot_2021-06-28_at_5.19.30_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ac9f23bd-78ec-49d9-b482-02acd93be86d/Screen_Shot_2021-06-28_at_5.19.30_PM.png)
 
 GetAZs and Select
 
@@ -123,26 +126,26 @@ GetAZs and Select
 - returns list of AZs in a region
 - use Select fn to reference AZ in a list
 
-    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/cc9b8cc3-db63-4c52-a65c-f3ccff3cd81b/Screen_Shot_2021-06-28_at_5.22.04_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/cc9b8cc3-db63-4c52-a65c-f3ccff3cd81b/Screen_Shot_2021-06-28_at_5.22.04_PM.png)
+  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/cc9b8cc3-db63-4c52-a65c-f3ccff3cd81b/Screen_Shot_2021-06-28_at_5.22.04_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/cc9b8cc3-db63-4c52-a65c-f3ccff3cd81b/Screen_Shot_2021-06-28_at_5.22.04_PM.png)
 
 Join and Split
 
 - used to join and split similar to programming
 
-    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a5ae2beb-5da1-46fb-b370-4b0beac6992b/Screen_Shot_2021-06-28_at_5.25.19_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a5ae2beb-5da1-46fb-b370-4b0beac6992b/Screen_Shot_2021-06-28_at_5.25.19_PM.png)
+  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a5ae2beb-5da1-46fb-b370-4b0beac6992b/Screen_Shot_2021-06-28_at_5.25.19_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a5ae2beb-5da1-46fb-b370-4b0beac6992b/Screen_Shot_2021-06-28_at_5.25.19_PM.png)
 
- Base64 and Sub
+Base64 and Sub
 
 - accepts text and passed output in Base64 encoded text
 - sub allows you to do replacement on variables - think dynamic variable ${ variable }
 
-    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/39bb9104-dd9d-400e-9599-f8d95bc2ec5f/Screen_Shot_2021-06-28_at_5.27.43_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/39bb9104-dd9d-400e-9599-f8d95bc2ec5f/Screen_Shot_2021-06-28_at_5.27.43_PM.png)
+  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/39bb9104-dd9d-400e-9599-f8d95bc2ec5f/Screen_Shot_2021-06-28_at_5.27.43_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/39bb9104-dd9d-400e-9599-f8d95bc2ec5f/Screen_Shot_2021-06-28_at_5.27.43_PM.png)
 
 Cidr
 
 - provide CIDR range for VPC to use
 
-    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/03cf50b1-b97c-4a7b-929e-53c8f3fa0b12/Screen_Shot_2021-06-28_at_5.29.31_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/03cf50b1-b97c-4a7b-929e-53c8f3fa0b12/Screen_Shot_2021-06-28_at_5.29.31_PM.png)
+  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/03cf50b1-b97c-4a7b-929e-53c8f3fa0b12/Screen_Shot_2021-06-28_at_5.29.31_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/03cf50b1-b97c-4a7b-929e-53c8f3fa0b12/Screen_Shot_2021-06-28_at_5.29.31_PM.png)
 
 ---
 
@@ -151,10 +154,10 @@ Cidr
 Concepts
 
 - optional section matches a key to a set of named values
-- can use the intrinsic function `!FindInMap`  to retrieve values in a map
+- can use the intrinsic function `!FindInMap` to retrieve values in a map
 - templates can contain a mappings object
-    - map keys to value
-    - can have one key, or top and second levels
+  - map keys to value
+  - can have one key, or top and second levels
 - use case: to retrieve a image id for a particular region
 - improve template portability
 
@@ -162,7 +165,7 @@ Visually
 
 - need to provide at least one top level key
 
-    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c6160182-0b2a-4bc9-b3d0-9ff7fd492038/Screen_Shot_2021-07-01_at_2.59.54_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c6160182-0b2a-4bc9-b3d0-9ff7fd492038/Screen_Shot_2021-07-01_at_2.59.54_PM.png)
+  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c6160182-0b2a-4bc9-b3d0-9ff7fd492038/Screen_Shot_2021-07-01_at_2.59.54_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c6160182-0b2a-4bc9-b3d0-9ff7fd492038/Screen_Shot_2021-07-01_at_2.59.54_PM.png)
 
 ---
 
@@ -172,6 +175,19 @@ Concepts
 
 - optional `Outputs` section declares output values that you can import into other stacks to create cross-stack references, return in response(to describe stack calls), or view in the AWS CFN console
 - example: you can output the S3 bucket name for a stack to make the bucket easier to find
+- provide status info and how to access services in a stack
+- entirely optional
+- values can be declared in this section
+  - visible as outputs when using CLI
+  - visible as outputs in console UI
+  - accessible from a parent stack when using nesting
+  - can be exported, allowing cross-stack references
+
+Visually
+
+- example of outputting a wordpress URL - using a key/value pair and the `!Join` function
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/eadbc47b-cd1f-41da-b0c0-17e38f982fc5/Screen_Shot_2021-07-02_at_8.11.07_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/eadbc47b-cd1f-41da-b0c0-17e38f982fc5/Screen_Shot_2021-07-02_at_8.11.07_PM.png)
 
 ---
 
