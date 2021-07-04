@@ -187,7 +187,7 @@ Visually
 
 - example of outputting a wordpress URL - using a key/value pair and the `!Join` function
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/eadbc47b-cd1f-41da-b0c0-17e38f982fc5/Screen_Shot_2021-07-02_at_8.11.07_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/eadbc47b-cd1f-41da-b0c0-17e38f982fc5/Screen_Shot_2021-07-02_at_8.11.07_PM.png)
+  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/eadbc47b-cd1f-41da-b0c0-17e38f982fc5/Screen_Shot_2021-07-02_at_8.11.07_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/eadbc47b-cd1f-41da-b0c0-17e38f982fc5/Screen_Shot_2021-07-02_at_8.11.07_PM.png)
 
 ---
 
@@ -197,9 +197,20 @@ Concepts
 
 - statements that define the circumstances under which entities are created or configured.
   - You might use conditions when you want to reuse a template that can create resources in different contexts, such as a test environment versus a production environment.
-- In your template, you can add an EnvironmentType input parameter, which accepts either prod or test as inputs.
+- In your template, you can add an `EnvironmentType` input parameter, which accepts either `prod` or `test` as inputs.
 - Conditions are evaluated based on predefined pseudo parameters or input parameter values that you specify when you create or update a stack.
   - Within each condition, you can reference another condition, a parameter value, or a mapping. After you define all your conditions, you can associate them with resources and resource properties in the Resources and Outputs sections of a template
+- optional. each condition is evaluated to true or false
+- processed before resources are created
+- uses other intrinsic functions
+- associated with logical resources to control if they are created or not
+- conditions can be nested
+
+Visually
+
+- ex: `EnvType` to declare if env is `dev` or `prod`
+
+  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2d72670a-9f90-462c-b8f4-4f5553bc7ff0/Screen_Shot_2021-07-04_at_3.05.14_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2d72670a-9f90-462c-b8f4-4f5553bc7ff0/Screen_Shot_2021-07-04_at_3.05.14_PM.png)
 
 ---
 
