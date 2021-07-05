@@ -218,7 +218,8 @@ Visually
 
 Concepts
 
-- notes
+- Attribute you can specify that the creation of a specific resource follows another
+- when you add `DependsOn` attribute to a resource, the resource is only created after the creation of the resource specified
 
 ---
 
