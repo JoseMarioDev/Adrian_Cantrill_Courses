@@ -227,7 +227,8 @@ Concepts
 
 Concepts
 
-- notes
+- `CreationPolicy`, `WaitConditions`, and `cfn-signal` can all be used together to prevent the status of a resource from reaching complete until AWS CloudFormation receives a specified number of success signals or a timeout period is exceeded
+- the cfn-signal helper script signals AWS CloudFormation to indicate whether EC2 instances have been successfully created or updated
 
 ---
 
